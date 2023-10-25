@@ -1,0 +1,12 @@
+<h1> Receitas </h1>
+
+<dl>
+  <% @recipes.each do |recipe| %>
+    <dt>
+      <strong>Nome:</strong> <%= recipe.name %>
+    </dt>
+    <dd>
+      <strong>Tipo de receita:</strong> <%= recipe.recipe_type %>
+    </dd>
+  <%end%>
+</dl>
