@@ -1,6 +1,6 @@
 # README
 
-Ultima aula concluída: 
+Ultima aula concluída: criar alguns objetos: Recipe.create
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
