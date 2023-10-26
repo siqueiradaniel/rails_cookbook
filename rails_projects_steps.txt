@@ -1,0 +1,16 @@
+rails new
+routes
+controller
+html
+models
+criar lista de objetos 
+mostrar objetos 
+criar bd model recipe
+criar migrate
+criar alguns objetos: Recipe.create
+generate new migration add_columns cuisine, ingredinets cook_method, cook_time:integers
+Criar rota receitas com pagina e link to
+Rota new recipe
+recipe form
+salvar form no bd
+gerar novo modelo recipe_type name
