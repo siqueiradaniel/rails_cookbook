@@ -13,8 +13,10 @@
   <body>
     <nav> 
       <ul>
-        <li><%= link_to "Home", root_path %> </li>
-        <li><%= link_to "Cadastrar nova receita", new_recipe_path %> </li>
+        <li><%= link_to 'Home', root_path %> </li>
+        <li><%= link_to 'Cadastrar nova receita', new_recipe_path %> </li>
+        <li><%= link_to 'Cadastrar novo tipo de receita', new_recipe_type_path%>
+        <li><%= link_to 'Cadastrar cozinha', new_cuisine_path%>
       </ul>
     </nav>
     <%= yield %>

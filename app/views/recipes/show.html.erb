@@ -1,7 +1,41 @@
 <h1>Informações sobre a receita de <%=@recipe.name%></h1>
-<strong>Nome:</strong> <%= @recipe.name %> <br>
-<strong>Tipo de receita:</strong> <%= @recipe.recipe_type %> <br>
-<strong>Cozinha:</strong> <%= @recipe.cuisine %> <br>
-<strong>Tipo de receita:</strong> <%= @recipe.cook_method %> <br>
-<strong>Tipo de receita:</strong> <%= @recipe.cook_time %> <br>
-<strong>Tipo de receita:</strong> <%= @recipe.ingredients %>
+
+<%= link_to 'Editar', edit_recipe_path %>
+
+<%if flash[:notice]%>
+  <div style= "margin: 10px 0px">
+    <%= flash[:notice]%>
+  </div>
+<%end%>
+
+<dl>
+  <dt>
+    <strong>Nome:</strong> <%= @recipe.name %> <br>
+  </dt>
+
+  <dd>
+    <strong>Tipo de receita:</strong> <%= @recipe.recipe_type.name if @recipe.recipe_type%> <br>
+  </dd>
+  
+  <dd>
+    <strong>Cozinha:</strong> <%= @recipe.cuisine.name if @recipe.cuisine%> <br>
+  </dd>
+  
+  <dd>
+    <strong>Tipo de receita:</strong> <%= @recipe.cook_method %> <br>
+  </dd>
+  
+  <dd>
+    <strong>Tipo de receita:</strong> <%= @recipe.cook_time %> <br>
+  </dd>
+  
+  <dd>
+    <strong>Tipo de receita:</strong> <%= @recipe.ingredients %>
+  </dd>
+
+  <dd>
+    <strong>Status:</strong> <%= @recipe.status %>
+  </dd>
+</dl>
+
+<%= button_to 'Publicar', publish_recipe_path, { method: 'patch' } %>
