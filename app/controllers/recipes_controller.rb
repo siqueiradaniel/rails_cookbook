@@ -47,7 +47,7 @@ class RecipesController < ApplicationController
   def publish
     recipe = Recipe.find(params[:id])
     recipe.published!
-    puts recipe
+
     redirect_to recipe_path(recipe.id)
   end
 end
